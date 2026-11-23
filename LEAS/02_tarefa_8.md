@@ -7,7 +7,7 @@
 | Situação | **Em andamento** |
 | Repositório | `mariadlribeiro/artefatos-atividade-7`, branch `tarefa-8` |
 
-## Enunciado (resumo)
+## Enunciado (resumo; texto completo em `enunciados/`)
 
 Repetir a avaliação da T7 com **o mesmo artefato, as mesmas instruções e, de preferência, as mesmas LLMs**, introduzindo variações controladas: outra versão do modelo, maior esforço de raciocínio (inclusive o máximo) ou outra variação justificada. Registrar configurações, prompts, resultados e evidências; verificar as evidências no artefato; comparar T7 × T8; atualizar o fluxograma; concluir sobre robustez e sensibilidade.
 

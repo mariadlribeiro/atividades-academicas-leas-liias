@@ -1,0 +1,2130 @@
+1
+00:00:01,580 --> 00:00:05,020
+Vamos lá, profe.
+
+2
+00:00:07,580 --> 00:00:11,690
+A gente vai apresentar algumas partes
+atrasadas,
+
+3
+00:00:11,740 --> 00:00:14,640
+mas a partir de onde a gente parou, no dia
+6 do 11,
+
+4
+00:00:14,800 --> 00:00:17,710
+alguns feedbacks, mas a gente vai falar um
+pouquinho
+
+5
+00:00:17,760 --> 00:00:21,400
+de algumas partes anteriores para ficar um
+pouquinho mais completo.
+
+6
+00:00:21,540 --> 00:00:24,000
+Bom, o nosso problema seria o dataset,
+
+7
+00:00:24,140 --> 00:00:27,840
+onde a gente já falou que tinha
+duplicadas,
+
+8
+00:00:29,350 --> 00:00:34,300
+que o dataset público teve três problemas.
+
+9
+00:00:34,350 --> 00:00:38,460
+O primeiro são duplicadas: esses dois
+arquivos
+
+10
+00:00:38,510 --> 00:00:44,200
+têm o mesmo SHA-256 com nomes diferentes.
+
+11
+00:00:51,430 --> 00:00:57,570
+Depois, algumas imagens mostravam que
+tinha fogo, mas era só fumaça,
+
+12
+00:00:57,950 --> 00:01:01,450
+e o outro é o peso do custo mesmo.
+
+13
+00:01:02,140 --> 00:01:06,460
+E, assim, a gente falou no dia 6.
+
+14
+00:01:08,320 --> 00:01:11,520
+Bom, o dataset, a gente evoluiu um
+pouquinho,
+
+15
+00:01:11,660 --> 00:01:14,060
+tentamos deixar um pouquinho equilibrado,
+
+16
+00:01:14,650 --> 00:01:19,220
+porque uma das opções era colocar peso nas
+imagens,
+
+17
+00:01:19,270 --> 00:01:20,470
+colocar, digamos,
+
+18
+00:01:21,410 --> 00:01:24,380
+colocar imagens falsas ali ou não,
+
+19
+00:01:24,430 --> 00:01:29,330
+mas eu decidi chamar um dos outros dois
+datasets que estavam sobrando
+
+20
+00:01:30,640 --> 00:01:33,920
+para equilibrar isso para ter imagens
+reais realmente.
+
+21
+00:01:34,080 --> 00:01:37,580
+Ele foi dividido em três etapas,
+
+22
+00:01:37,660 --> 00:01:41,120
+que agora é um pouquinho maior que antes,
+
+23
+00:01:41,770 --> 00:01:44,210
+que foi a origem, a validação,
+
+24
+00:01:44,490 --> 00:01:46,820
+aliás, duplicadas, revisão novamente,
+
+25
+00:01:46,870 --> 00:01:49,210
+porque a gente chamou um novo dataset,
+
+26
+00:01:49,410 --> 00:01:52,290
+e uma revisão e uma cópia.
+
+27
+00:01:52,970 --> 00:01:55,350
+Depois, o equilíbrio e as condições,
+
+28
+00:01:55,610 --> 00:01:58,130
+a segunda fonte, a exportação e o treino,
+
+29
+00:02:00,050 --> 00:02:06,550
+aqui a quantidade de imagens, como
+revisamos isso.
+
+30
+00:02:09,080 --> 00:02:11,350
+Bom, como eu falei na última aula,
+
+31
+00:02:11,400 --> 00:02:15,260
+eu tinha pedido para o Claude Opus 5.5
+
+32
+00:02:15,740 --> 00:02:18,320
+criar algumas páginas para ter revisões,
+
+33
+00:02:19,360 --> 00:02:22,580
+que a gente vai mostrar no final dos
+slides,
+
+34
+00:02:22,660 --> 00:02:27,180
+como que isso foi na prática, as páginas,
+
+35
+00:02:27,870 --> 00:02:29,130
+ao vivo ali.
+
+36
+00:02:29,690 --> 00:02:35,200
+Bom, a gente fez revisão olho por olho,
+
+37
+00:02:35,810 --> 00:02:39,210
+digamos assim, de humano realmente, de
+pessoas, a gente.
+
+38
+00:02:39,730 --> 00:02:46,770
+E teve a auditoria às cegas, que seria um
+robôzinho ali,
+
+39
+00:02:48,030 --> 00:02:53,270
+ele dá a sugestão dele que aquela imagem é
+fogo,
+
+40
+00:02:53,320 --> 00:02:56,110
+tem fumaça e é uma floresta,
+
+41
+00:02:56,160 --> 00:03:00,590
+e tem a condição da imagem,
+
+42
+00:03:02,570 --> 00:03:05,930
+tem uma pessoa, tem um veículo, etcétera.
+
+43
+00:03:06,680 --> 00:03:10,910
+E depois, essa auditoria às cegas,
+
+44
+00:03:10,960 --> 00:03:14,870
+ela só aparece depois de uma revisão
+humana:
+
+45
+00:03:14,920 --> 00:03:18,290
+ela vai dar os tópicos, você vai olhar a
+imagem,
+
+46
+00:03:18,340 --> 00:03:19,820
+vai classificar elas,
+
+47
+00:03:20,440 --> 00:03:24,750
+e depois vai aparecer aquela auditoria às
+cegas,
+
+48
+00:03:24,800 --> 00:03:28,160
+para ver se a IA está acertando mesmo ou
+não.
+
+49
+00:03:32,000 --> 00:03:34,950
+Então, como o senhor tinha pedido para a
+gente equilibrar
+
+50
+00:03:35,000 --> 00:03:38,420
+a mesma quantidade de imagens com fogo e
+sem fogo,
+
+51
+00:03:38,620 --> 00:03:41,720
+a gente puxou um segundo dataset,
+
+52
+00:03:41,860 --> 00:03:47,520
+esse novo dataset teria 11.034 novas
+fotos, imagens.
+
+53
+00:03:48,060 --> 00:03:51,760
+Então, primeiro a gente removeu as imagens
+repetidas,
+
+54
+00:03:52,020 --> 00:03:56,910
+depois selecionamos as que parecia mostrar
+floresta sem fogo,
+
+55
+00:03:56,960 --> 00:03:59,960
+e escolhemos as mais diferentes entre
+elas,
+
+56
+00:04:00,120 --> 00:04:04,460
+para evitar muitas fotos parecidas do
+mesmo cenário.
+
+57
+00:04:04,660 --> 00:04:11,640
+Revisamos 410 dessas imagens e 400
+entraram para o nosso conjunto.
+
+58
+00:04:12,040 --> 00:04:15,070
+Com isso, a parte da floresta ficou
+equilibrada agora,
+
+59
+00:04:15,120 --> 00:04:19,740
+com 510 imagens com fogo e 510 sem fogo.
+
+60
+00:04:23,750 --> 00:04:25,240
+Então, o equilíbrio do treino.
+
+61
+00:04:25,290 --> 00:04:30,040
+No nosso treino, equilibramos a chance de
+cada tipo de imagem ser sorteado.
+
+62
+00:04:30,090 --> 00:04:35,690
+Antes, as imagens com fogo representavam
+54,1% desse sorteio,
+
+63
+00:04:35,830 --> 00:04:40,280
+e as imagens sem fogo, 45,9%.
+
+64
+00:04:40,330 --> 00:04:45,530
+Com os pesos, cada classe passou a ter 50%
+de chance agora.
+
+65
+00:04:45,890 --> 00:04:47,960
+E as imagens continuam as mesmas.
+
+66
+00:04:48,010 --> 00:04:50,100
+Nenhuma é apagada ou copiada,
+
+67
+00:04:50,150 --> 00:04:54,440
+e a validação e o teste também mantêm a
+distribuição original,
+
+68
+00:04:54,490 --> 00:04:56,700
+mas o peso não cria imagens novas.
+
+69
+00:04:56,750 --> 00:05:02,210
+No treino, por exemplo, ainda há poucas
+cenas urbanas sem fogo,
+
+70
+00:05:02,330 --> 00:05:08,250
+que são 3 casas, 4 prédios e 13 cenas de
+cidade.
+
+71
+00:05:10,930 --> 00:05:12,710
+Os detalhes de cada imagem.
+
+72
+00:05:12,870 --> 00:05:16,940
+Também medimos algumas características das
+imagens: brilho,
+
+73
+00:05:16,990 --> 00:05:22,140
+tamanho, formato, nitidez, cores, os tons
+de fogo,
+
+74
+00:05:22,190 --> 00:05:24,460
+a moldura e a qualidade das imagens.
+
+75
+00:05:24,510 --> 00:05:27,520
+Isso ajuda a entender as condições dessas
+imagens
+
+76
+00:05:27,570 --> 00:05:32,130
+e comparar os conjuntos de treino,
+validação e teste.
+
+77
+00:05:32,570 --> 00:05:34,680
+As imagens escuras, por exemplo,
+
+78
+00:05:34,730 --> 00:05:38,670
+elas aparecem em proporções parecidas nos
+três.
+
+79
+00:05:38,990 --> 00:05:45,220
+24% no treino, 29% na validação e 26% no
+teste.
+
+80
+00:05:46,170 --> 00:05:49,180
+Mas quando comparamos as imagens com fogo
+e sem fogo,
+
+81
+00:05:49,230 --> 00:05:51,650
+encontramos diferenças.
+
+82
+00:05:54,680 --> 00:05:55,880
+Pode passar.
+
+83
+00:05:58,760 --> 00:06:02,030
+Então, ter a mesma quantidade de imagens
+
+84
+00:06:02,080 --> 00:06:05,390
+não significa que elas tenham a mesma
+característica.
+
+85
+00:06:05,440 --> 00:06:10,800
+Entre as imagens sem fogo, 49% são
+quadradas
+
+86
+00:06:11,140 --> 00:06:14,520
+e entre as com fogo, só 1%.
+
+87
+00:06:14,880 --> 00:06:18,160
+Também as imagens pequenas são sem fogo.
+
+88
+00:06:18,240 --> 00:06:20,630
+Já as imagens com fogo são mais escuras,
+
+89
+00:06:20,680 --> 00:06:24,540
+porque muitos incêndios são fotografados à
+noite.
+
+90
+00:06:24,880 --> 00:06:29,590
+Isso traz o risco que a rede poderia usar
+o formato
+
+91
+00:06:29,640 --> 00:06:33,960
+ou o tamanho da foto como pista em vez de
+olhar para a chama.
+
+92
+00:06:34,440 --> 00:06:36,770
+E, por isso, fizemos um teste para
+verificar
+
+93
+00:06:36,820 --> 00:06:39,540
+se ela estava usando esse tipo de atalho.
+
+94
+00:06:43,690 --> 00:06:46,960
+Então, treinamos três redes conhecidas,
+
+95
+00:06:47,010 --> 00:06:53,430
+que seriam a ResNet18, a DenseNet121 e a
+EfficientNet-B0.
+
+96
+00:06:53,770 --> 00:06:55,760
+Usamos o mesmo procedimento para as três
+
+97
+00:06:55,810 --> 00:06:58,950
+e escolhemos a melhor versão de cada,
+
+98
+00:06:59,330 --> 00:07:01,440
+usando a validação.
+
+99
+00:07:01,490 --> 00:07:06,960
+O teste final com 207 imagens foi usado
+uma única vez
+
+100
+00:07:07,010 --> 00:07:09,220
+depois dessas escolhas.
+
+101
+00:07:09,270 --> 00:07:12,780
+A DenseNet121 e a EfficientNet-B0
+
+102
+00:07:12,830 --> 00:07:18,620
+ficaram com o mesmo desempenho, F2 de
+99,1%.
+
+103
+00:07:18,670 --> 00:07:23,640
+Cada uma deixou passar um incêndio e deu
+um alarme falso.
+
+104
+00:07:23,690 --> 00:07:27,120
+A ResNet18 deixou passar três incêndios
+
+105
+00:07:27,170 --> 00:07:29,280
+e não deu nenhum alarme falso.
+
+106
+00:07:29,330 --> 00:07:32,580
+Mas esses resultados não mostram sozinhos
+
+107
+00:07:32,630 --> 00:07:37,110
+se a rede está olhando para a chama ou
+usando o atalho.
+
+108
+00:07:48,950 --> 00:07:52,120
+Maria? Maria?
+
+109
+00:08:17,030 --> 00:08:18,790
+[trecho pouco audível]
+
+110
+00:08:21,530 --> 00:08:26,440
+O risco é o shortcut learning no treino.
+
+111
+00:08:26,930 --> 00:08:30,420
+O formato quadrado e pequeno estava
+correlacionado
+
+112
+00:08:30,470 --> 00:08:32,390
+com a classe negativa.
+
+113
+00:08:32,450 --> 00:08:36,820
+Para testar, montamos um conjunto fora da
+
+114
+00:08:36,870 --> 00:08:42,110
+distribuição do treino, de 297 fotos
+
+115
+00:08:42,950 --> 00:08:46,870
+da nova segunda fonte do nosso dataset.
+
+116
+00:08:48,560 --> 00:08:53,970
+Todas quadradas e pequenas, com 148
+positivas
+
+117
+00:08:54,020 --> 00:08:56,880
+e 149 negativas
+
+118
+00:08:57,270 --> 00:09:03,050
+sem quase-duplicatas do dataset e com
+rótulo cego.
+
+119
+00:09:03,980 --> 00:09:10,660
+Avaliamos com o mesmo limiar calibrado na
+validação:
+
+120
+00:09:11,350 --> 00:09:15,930
+se a rede usasse o formato, o recall
+cairia.
+
+121
+00:09:15,990 --> 00:09:19,190
+A queda máxima foi de 2,5 pontos
+
+122
+00:09:20,190 --> 00:09:23,450
+no treinamento
+
+123
+00:09:25,500 --> 00:09:30,160
+que eu já tinha realizado antes da
+disciplina.
+
+124
+00:09:30,630 --> 00:09:33,060
+Ele só caiu 2,5 pontos percentuais.
+
+125
+00:09:33,110 --> 00:09:34,560
+A ResNet...
+
+126
+00:09:34,610 --> 00:09:39,080
+A ResNet18, de 97, foi para 95,
+
+127
+00:09:39,130 --> 00:09:44,280
+e a EfficientNet-B0, de 99 para 96.
+
+128
+00:09:48,590 --> 00:09:51,630
+E a DenseNet subiu para 100%.
+
+129
+00:09:52,180 --> 00:09:55,060
+Mudou algo assim, pequenas coisas.
+
+130
+00:09:56,080 --> 00:10:00,950
+Mas isso foi que eu usei IA também na
+minha...
+
+131
+00:10:01,000 --> 00:10:04,050
+na avaliação antiga do treinamento que eu
+tinha feito.
+
+132
+00:10:04,100 --> 00:10:06,540
+Eu não tinha utilizado IA.
+
+133
+00:10:08,830 --> 00:10:12,890
+Depois, não há evidência de atalho do
+formato.
+
+134
+00:10:13,660 --> 00:10:17,940
+A ressalva são os casos fáceis e o rótulo
+dado por IA,
+
+135
+00:10:18,160 --> 00:10:20,400
+conferido por amostra.
+
+136
+00:10:23,000 --> 00:10:26,270
+Agora, as redes: fizemos análise de erros,
+
+137
+00:10:26,320 --> 00:10:29,170
+caso a caso, para conferir por quê.
+
+138
+00:10:29,220 --> 00:10:32,180
+[trecho pouco audível] 2,5%,
+
+139
+00:10:32,370 --> 00:10:35,090
+o único falso negativo comum às três redes
+
+140
+00:10:35,140 --> 00:10:40,060
+tem muita fumaça e chama pequena.
+
+141
+00:10:41,030 --> 00:10:42,230
+Isso seria...
+
+142
+00:10:42,910 --> 00:10:48,510
+Ali, a EfficientNet disse que uma imagem
+
+143
+00:10:52,290 --> 00:10:54,050
+tinha fumaça,
+
+144
+00:10:54,380 --> 00:10:56,880
+tinha cara de fumaça, como eu disse ali,
+
+145
+00:10:57,040 --> 00:10:58,370
+mas é a neblina.
+
+146
+00:10:58,420 --> 00:11:01,330
+Então, eu ainda não olhei esse detalhe
+
+147
+00:11:01,380 --> 00:11:03,670
+porque eu tenho que analisar
+
+148
+00:11:03,720 --> 00:11:06,670
+uma rede neural, como ela vai classificar.
+
+149
+00:11:06,720 --> 00:11:10,050
+Uma nuvem, uma neblina e a fumaça.
+
+150
+00:11:10,100 --> 00:11:11,890
+Então, eu tenho a diferença,
+
+151
+00:11:11,940 --> 00:11:15,380
+mas quando elas estão muito fininhas,
+ficam meio parecidas.
+
+152
+00:11:17,020 --> 00:11:23,160
+E a ResNet ali, os 50% de, digamos, para
+fogo,
+
+153
+00:11:24,380 --> 00:11:28,760
+foi porque ela entendeu que o pôr do sol
+
+154
+00:11:29,980 --> 00:11:31,940
+era fogo, mas não era.
+
+155
+00:11:39,760 --> 00:11:40,960
+Bom, a escolha.
+
+156
+00:11:41,100 --> 00:11:47,390
+Como a EfficientNet-B0 e a DenseNet121
+tiveram o mesmo resultado
+
+157
+00:11:47,440 --> 00:11:51,980
+nos testes, também comparamos o tempo de
+processamento.
+
+158
+00:11:52,260 --> 00:11:55,020
+No computador, usando o benchmark,
+
+159
+00:11:55,400 --> 00:12:00,930
+a EfficientNet-B0 levou 35 milissegundos
+por imagem
+
+160
+00:12:00,980 --> 00:12:04,900
+e a DenseNet121 levou quase 97,
+
+161
+00:12:05,280 --> 00:12:07,060
+quase três vezes mais.
+
+162
+00:12:07,220 --> 00:12:10,410
+Por isso, escolhemos a EfficientNet-B0
+
+163
+00:12:10,460 --> 00:12:11,550
+para o aplicativo.
+
+164
+00:12:11,600 --> 00:12:14,930
+A DenseNet121 ficou como referência
+
+165
+00:12:14,980 --> 00:12:20,040
+porque teve recall de 100% para fogo no
+teste de atalho.
+
+166
+00:12:26,680 --> 00:12:27,880
+O benchmark.
+
+167
+00:12:28,850 --> 00:12:31,140
+Organizamos os experimentos em benchmark
+
+168
+00:12:31,190 --> 00:12:34,890
+e cada campanha responde a uma pergunta.
+
+169
+00:12:35,250 --> 00:12:37,210
+Como qual rede funciona melhor,
+
+170
+00:12:37,370 --> 00:12:39,200
+se o aumento de dados ajuda
+
+171
+00:12:39,250 --> 00:12:42,990
+ou quanto o resultado muda quando
+repetimos o treino.
+
+172
+00:12:43,310 --> 00:12:46,440
+Então, os valores ficam em um arquivo de
+configuração
+
+173
+00:12:46,490 --> 00:12:51,410
+e o programa combina esses valores para
+executar os experimentos.
+
+174
+00:12:51,730 --> 00:12:53,640
+Também é possível consultar o plano
+
+175
+00:12:53,690 --> 00:12:56,350
+e o tempo estimado antes de começar.
+
+176
+00:12:56,470 --> 00:12:59,720
+Se já existe um resultado com os mesmos
+parâmetros,
+
+177
+00:12:59,770 --> 00:13:03,570
+o sistema pode reaproveitá-lo.
+
+178
+00:13:03,870 --> 00:13:06,250
+Então, são seis campanhas.
+
+179
+00:13:06,570 --> 00:13:09,700
+E o README explica o que foi feito
+
+180
+00:13:09,750 --> 00:13:12,230
+com a ajuda da inteligência artificial
+
+181
+00:13:12,280 --> 00:13:14,710
+e o que foi feito por nós.
+
+182
+00:13:20,080 --> 00:13:22,140
+O que o benchmark mostrou.
+
+183
+00:13:22,340 --> 00:13:24,590
+Então, ele mostrou que as diferenças
+pequenas
+
+184
+00:13:24,640 --> 00:13:26,530
+podem acontecer por acaso.
+
+185
+00:13:26,580 --> 00:13:30,530
+Com a mesma EfficientNet-B0,
+
+186
+00:13:30,580 --> 00:13:32,840
+com três sementes diferentes,
+
+187
+00:13:33,120 --> 00:13:36,780
+os alarmes falsos variam de 1 a 5.
+
+188
+00:13:37,680 --> 00:13:43,260
+E o F2 ficou com 99,1% nas três execuções,
+
+189
+00:13:43,310 --> 00:13:46,400
+porque essa métrica dá mais peso aos
+incêndios
+
+190
+00:13:46,450 --> 00:13:48,630
+que a rede deixa passar.
+
+191
+00:13:49,010 --> 00:13:51,080
+Também vimos que na validação,
+
+192
+00:13:51,130 --> 00:13:56,910
+as três redes ficaram entre 99,5% e 99,8%.
+
+193
+00:13:57,610 --> 00:14:02,450
+Esse conjunto não ajudou muito a separar
+uma rede da outra.
+
+194
+00:14:02,630 --> 00:14:07,280
+Neste experimento, o aumento de dados
+mudou o resultado de
+
+195
+00:14:07,330 --> 00:14:08,890
+apenas uma imagem.
+
+196
+00:14:09,540 --> 00:14:11,810
+Por isso, uma ou duas imagens de diferença
+
+197
+00:14:11,860 --> 00:14:15,340
+não bastam para afirmar que uma rede é
+melhor que a outra.
+
+198
+00:14:15,660 --> 00:14:22,070
+Como as duas melhores tiveram o mesmo
+desempenho,
+
+199
+00:14:22,920 --> 00:14:26,060
+a velocidade ajudou muito na escolha.
+
+200
+00:14:34,380 --> 00:14:37,690
+Bom, o que foi entregue?
+
+201
+00:14:37,740 --> 00:14:41,500
+Bom, aqui já começa o que mais ou menos
+foi pedido.
+
+202
+00:14:41,940 --> 00:14:47,410
+Está tudo reprodutível e está tudo
+público.
+
+203
+00:14:47,460 --> 00:14:51,570
+O site documenta o pipeline com o vídeo de
+dois minutos,
+
+204
+00:14:51,620 --> 00:14:55,580
+como foi pedido, o resultado e o teste de
+atalho.
+
+205
+00:14:56,200 --> 00:15:01,350
+O repositório tem os treze scripts,
+
+206
+00:15:03,190 --> 00:15:07,900
+os relatórios gerados por eles e o
+benchmark.
+
+207
+00:15:07,950 --> 00:15:15,810
+O benchmark... dos itens combinados que o
+senhor pediu nos feedbacks,
+
+208
+00:15:15,860 --> 00:15:17,740
+entregamos 10 de 13.
+
+209
+00:15:18,380 --> 00:15:25,960
+De acordo, ainda precisamos apresentar as
+LLMs, as diferenças,
+
+210
+00:15:26,620 --> 00:15:31,900
+e precisamos arrumar o vídeo, deixar ali
+como o senhor pediu.
+
+211
+00:15:32,500 --> 00:15:34,750
+E os parciais dependem de fotos novas.
+
+212
+00:15:34,800 --> 00:15:39,060
+Mas ali o resto, como os erros que deram,
+
+213
+00:15:39,320 --> 00:15:45,380
+isso não vai dar tempo para olhar mais
+ainda na disciplina.
+
+214
+00:15:48,370 --> 00:15:51,690
+Limites e próximos passos que seriam os
+nossos.
+
+215
+00:15:53,060 --> 00:15:57,720
+Os próximos passos seriam mais assim.
+
+216
+00:15:58,140 --> 00:16:02,690
+Os limites seriam as 400 fotos da segunda
+fonte.
+
+217
+00:16:02,740 --> 00:16:05,260
+O teste de atalho foi rotulado às cegas.
+
+218
+00:16:05,540 --> 00:16:09,020
+Falta a gente conferir realmente
+
+219
+00:16:09,810 --> 00:16:15,220
+que seria do outro dataset, do dataset
+novo que a gente chamou.
+
+220
+00:16:16,110 --> 00:16:22,610
+Eu comparei, para ver: a quantidade de 465
+imagens
+
+221
+00:16:27,060 --> 00:16:29,610
+conferidas olho por olho
+
+222
+00:16:29,660 --> 00:16:35,100
+e 400 fotos do dataset conferidas por IA.
+
+223
+00:16:35,570 --> 00:16:39,530
+Aí teria as diferenças.
+
+224
+00:16:40,500 --> 00:16:42,590
+Os testes são de casos claros;
+
+225
+00:16:42,640 --> 00:16:46,880
+falta definir e medir os difíceis.
+
+226
+00:16:48,400 --> 00:16:52,800
+Primeiramente, agora eu defini só para
+florestas;
+
+227
+00:16:52,980 --> 00:16:56,760
+para cidades, para áreas urbanas,
+
+228
+00:16:56,840 --> 00:17:01,870
+Tem poucas imagens, mas eu coloquei um
+equilíbrio maior,
+
+229
+00:17:01,920 --> 00:17:03,380
+mais para florestas.
+
+230
+00:17:04,840 --> 00:17:07,000
+A licença da segunda fonte.
+
+231
+00:17:07,240 --> 00:17:11,330
+Aí eu me esqueci de colocar.
+
+232
+00:17:11,410 --> 00:17:14,750
+Só vou atualizar no GitHub, mas já tenho.
+
+233
+00:17:15,820 --> 00:17:21,530
+Os próximos passos seriam: eu escolhi a
+EfficientNet-B0
+
+234
+00:17:21,580 --> 00:17:25,760
+porque ela é mais leve que as outras duas
+redes,
+
+235
+00:17:26,360 --> 00:17:28,780
+principalmente para aplicativos, eu acho.
+
+236
+00:17:29,240 --> 00:17:31,900
+Ou depois colocar um Grad-CAM,
+
+237
+00:17:32,880 --> 00:17:36,620
+que seria melhor, principalmente para de
+noite.
+
+238
+00:17:37,020 --> 00:17:40,270
+Um teste de casos diferentes, chamas
+pequenas,
+
+239
+00:17:40,320 --> 00:17:44,040
+e essas neblinas, folhas de outono,
+
+240
+00:17:44,570 --> 00:17:48,230
+seria mais para a rede
+
+241
+00:17:48,280 --> 00:17:53,600
+não dar aquele problema que deu na
+EfficientNet-B0,
+
+242
+00:17:54,300 --> 00:17:59,380
+que ela considerou uma imagem com fumaça,
+mas era neblina.
+
+243
+00:18:02,070 --> 00:18:07,760
+Em relação à disciplina, a gente aprendeu
+
+244
+00:18:11,230 --> 00:18:16,620
+que antes de treinar qualquer dataset,
+
+245
+00:18:17,460 --> 00:18:22,500
+seja com imagens ou dados, a gente precisa
+ver
+
+246
+00:18:22,870 --> 00:18:26,430
+da onde ele é, se ele está correto ou não.
+
+247
+00:18:26,650 --> 00:18:29,310
+A gente precisa conferir cada imagem.
+
+248
+00:18:29,710 --> 00:18:32,390
+Agora tem a IA, a IA pode nos ajudar.
+
+249
+00:18:36,050 --> 00:18:40,060
+Depois, tem que olhar, tem as suas etapas,
+
+250
+00:18:40,110 --> 00:18:44,480
+a gente se atentar a elas, que seria a
+origem, a validação,
+
+251
+00:18:44,530 --> 00:18:49,120
+se tem alguma duplicada, ver se isso vai
+dar algum erro
+
+252
+00:18:49,170 --> 00:18:50,710
+também no treinamento,
+
+253
+00:18:53,430 --> 00:18:57,810
+depois testar elas, ver com carinho quais
+foram os erros.
+
+254
+00:19:04,270 --> 00:19:07,720
+Bom, todo o código, os relatórios e o
+benchmark
+
+255
+00:19:07,770 --> 00:19:09,670
+eles estão no repositório,
+
+256
+00:19:09,930 --> 00:19:14,850
+e o site mostra um resumo do nosso
+projeto.
+
+257
+00:19:15,050 --> 00:19:19,070
+E agora, a gente vai mostrar o que foi
+feito na prática.
+
+258
+00:19:22,200 --> 00:19:24,900
+Bom, a gente apresentou a teoria,
+
+259
+00:19:25,730 --> 00:19:29,340
+que muitas, em todas as perguntas, o
+senhor gostou
+
+260
+00:19:29,390 --> 00:19:32,790
+de ver mais a prática, ver o que realmente
+a gente fez.
+
+261
+00:19:34,470 --> 00:19:38,740
+Bom, eu gostei, eu queria realmente falar
+um pouco da teoria,
+
+262
+00:19:38,790 --> 00:19:42,070
+digamos assim, quais foram os resultados,
+como que foi,
+
+263
+00:19:42,130 --> 00:19:44,210
+e depois a prática.
+
+264
+00:19:44,450 --> 00:19:50,860
+Aqui, eu vou mudar de tela e vou
+apresentar aqui.
+
+265
+00:19:53,410 --> 00:19:56,840
+Aqui foi, como eu mostrei antes, o senhor,
+
+266
+00:19:56,890 --> 00:19:59,690
+na apresentação do dia 6, do 11,
+
+267
+00:20:00,990 --> 00:20:05,780
+aqui temos a página de revisão,
+
+268
+00:20:06,700 --> 00:20:08,940
+os tópicos dela,
+
+269
+00:20:09,180 --> 00:20:13,380
+aqui, isso aqui, eu já tinha mostrado,
+
+270
+00:20:14,500 --> 00:20:18,150
+o que realmente mudou. Aqui tem outra
+revisão,
+
+271
+00:20:18,200 --> 00:20:20,680
+essa revisão aqui,
+
+272
+00:20:23,400 --> 00:20:26,300
+aqui seria a revisão de ambiente,
+realmente.
+
+273
+00:20:26,820 --> 00:20:31,160
+Outra revisão, aqui seria revisão...
+
+274
+00:20:31,790 --> 00:20:33,600
+Opa, peraí...
+
+275
+00:20:33,650 --> 00:20:36,670
+Aqui seria a revisão cega,
+
+276
+00:20:37,180 --> 00:20:39,040
+eu disse, seria cega.
+
+277
+00:20:39,200 --> 00:20:41,280
+Que seria isso daqui,
+
+278
+00:20:41,620 --> 00:20:44,380
+depois a gente completar aqui.
+
+279
+00:20:45,500 --> 00:20:49,060
+Aí é uma floresta, sem fogo, sem fumaça.
+
+280
+00:20:49,660 --> 00:20:54,980
+Aqui vai apresentar o que o robôzinho,
+
+281
+00:20:55,030 --> 00:20:59,370
+da IA, do Claude Opus 5.5,
+
+282
+00:21:01,050 --> 00:21:02,580
+da revisão dele.
+
+283
+00:21:02,630 --> 00:21:06,070
+O ambiente, ele deu certo por uma revisão
+humana.
+
+284
+00:21:06,650 --> 00:21:09,810
+Aí a gente conferiu todas essas imagens
+aqui,
+
+285
+00:21:10,390 --> 00:21:12,330
+classificando elas todas,
+
+286
+00:21:14,920 --> 00:21:18,240
+pro novo dataset que puxamos.
+
+287
+00:21:18,660 --> 00:21:21,290
+Depois, as condições da imagem,
+
+288
+00:21:21,340 --> 00:21:22,740
+que o senhor pediu,
+
+289
+00:21:24,670 --> 00:21:26,070
+o senhor pediu aqui.
+
+290
+00:21:26,250 --> 00:21:28,700
+Bom, aqui ela tem um pouco mais detalhes,
+
+291
+00:21:28,750 --> 00:21:32,010
+que seria da onde a imagem foi tirada,
+
+292
+00:21:33,080 --> 00:21:34,900
+tirada do chão, assim,
+
+293
+00:21:34,980 --> 00:21:37,850
+se a pessoa está no telefone, realmente,
+
+294
+00:21:37,900 --> 00:21:39,900
+no nível dos olhos, assim.
+
+295
+00:21:41,520 --> 00:21:44,840
+Se for a essa, se for no helicóptero,
+
+296
+00:21:45,140 --> 00:21:46,340
+helicóptero,
+
+297
+00:21:47,560 --> 00:21:49,530
+ou foi por um drone,
+
+298
+00:21:49,580 --> 00:21:51,200
+ou uma câmera, assim.
+
+299
+00:21:51,740 --> 00:21:53,010
+E ou se foi pro satélite.
+
+300
+00:21:53,060 --> 00:21:58,930
+Depois, a hora do dia, se for dia ou
+noite,
+
+301
+00:21:59,540 --> 00:22:03,460
+se tem céu, qual é o tipo de vegetação,
+
+302
+00:22:04,040 --> 00:22:06,350
+aparece árvore, se aparece alguma pessoa,
+
+303
+00:22:06,400 --> 00:22:11,390
+algum veículo, se tem texto ou marca
+d'água,
+
+304
+00:22:11,440 --> 00:22:15,990
+se a imagem foi tirada de algum outro
+lugar.
+
+305
+00:22:17,930 --> 00:22:20,220
+Aqui já tem esse tópico aqui,
+
+306
+00:22:20,270 --> 00:22:21,180
+seria,
+
+307
+00:22:21,230 --> 00:22:23,350
+tem algo que parece só
+
+308
+00:22:23,570 --> 00:22:26,100
+tem algo que parece fogo, mas não é,
+
+309
+00:22:26,150 --> 00:22:27,180
+que seria o pôr do sol,
+
+310
+00:22:27,230 --> 00:22:32,380
+como uma das imagens que a ResNet18
+
+311
+00:22:33,750 --> 00:22:36,010
+confundiu, que ela errou.
+
+312
+00:22:36,390 --> 00:22:38,540
+O tipo de fogo,
+
+313
+00:22:38,590 --> 00:22:41,610
+ser um cenário florestal ou uma outra
+coisa,
+
+314
+00:22:41,690 --> 00:22:44,030
+a distância do fogo,
+
+315
+00:22:45,390 --> 00:22:46,760
+quantos focos,
+
+316
+00:22:46,810 --> 00:22:48,700
+focos desses seres separados,
+
+317
+00:22:48,750 --> 00:22:50,210
+focos separados,
+
+318
+00:22:50,430 --> 00:22:52,080
+a cor da chama, que tem várias,
+
+319
+00:22:52,130 --> 00:22:55,620
+se o fogo está parcialmente escondido,
+
+320
+00:22:55,670 --> 00:22:58,160
+se tem algo na frente do fogo,
+
+321
+00:22:58,210 --> 00:22:59,910
+se está escondendo demais ou não,
+
+322
+00:23:00,970 --> 00:23:02,770
+alguma observação,
+
+323
+00:23:03,580 --> 00:23:05,680
+se a gente quisesse colocar.
+
+324
+00:23:07,100 --> 00:23:12,700
+Depois, temos aqui outra revisão também,
+
+325
+00:23:15,850 --> 00:23:18,210
+essa revisão aqui de 410,
+
+326
+00:23:18,290 --> 00:23:20,050
+seria do novo dataset
+
+327
+00:23:21,670 --> 00:23:22,800
+que temos,
+
+328
+00:23:22,850 --> 00:23:24,260
+que a gente classificou elas,
+
+329
+00:23:24,310 --> 00:23:26,670
+está meio igual ao do dataset,
+
+330
+00:23:29,560 --> 00:23:31,590
+e aí fizemos,
+
+331
+00:23:31,640 --> 00:23:34,150
+aqui tem outra coisa,
+
+332
+00:23:34,200 --> 00:23:34,530
+aqui,
+
+333
+00:23:34,580 --> 00:23:37,140
+a revisão de pares,
+
+334
+00:23:38,600 --> 00:23:39,910
+a revisão de pares,
+
+335
+00:23:39,960 --> 00:23:41,640
+que eu já tinha mostrado para o senhor,
+
+336
+00:23:42,220 --> 00:23:44,250
+se tinha alguma duplicata,
+
+337
+00:23:44,300 --> 00:23:45,630
+aí que o senhor comentou,
+
+338
+00:23:45,680 --> 00:23:47,820
+se a diferença
+
+339
+00:23:49,910 --> 00:23:52,360
+do zoom das imagens,
+
+340
+00:23:52,410 --> 00:23:55,850
+da iluminação, do filtro da imagem,
+
+341
+00:23:56,070 --> 00:23:57,930
+que a gente já explicou,
+
+342
+00:23:58,470 --> 00:24:00,550
+e o site,
+
+343
+00:24:08,180 --> 00:24:10,240
+o site, como o senhor pediu,
+
+344
+00:24:10,840 --> 00:24:13,540
+aqui tem um problema,
+
+345
+00:24:14,280 --> 00:24:16,690
+seleciona o nosso problema aqui,
+
+346
+00:24:16,740 --> 00:24:20,140
+aqui dá para selecionar as pastas erradas
+que estava,
+
+347
+00:24:20,440 --> 00:24:22,020
+aqui seleciona,
+
+348
+00:24:22,580 --> 00:24:24,810
+qual é a fonte da imagem,
+
+349
+00:24:24,860 --> 00:24:26,950
+qual é o dataset,
+
+350
+00:24:27,000 --> 00:24:28,660
+qual é a pasta,
+
+351
+00:24:28,980 --> 00:24:30,890
+agora sem fogo, sem fumaça,
+
+352
+00:24:30,940 --> 00:24:32,140
+essas coisas.
+
+353
+00:24:34,180 --> 00:24:35,630
+Aqui tem as duplicadas,
+
+354
+00:24:35,680 --> 00:24:38,850
+qual imagem tem duplicadas no dataset,
+
+355
+00:24:38,900 --> 00:24:40,420
+qual não foi,
+
+356
+00:24:40,700 --> 00:24:42,370
+quais não são fotos,
+
+357
+00:24:42,420 --> 00:24:44,100
+que são sintéticas,
+
+358
+00:24:45,800 --> 00:24:48,090
+e fogo fora da floresta,
+
+359
+00:24:48,140 --> 00:24:50,200
+que foi ambiente.
+
+360
+00:24:50,840 --> 00:24:55,740
+Aqui também tem os oito casos de detalhes
+das imagens,
+
+361
+00:24:58,900 --> 00:25:02,320
+depois a imagem que a gente escolheu,
+
+362
+00:25:02,560 --> 00:25:04,940
+a pasta de origem delas,
+
+363
+00:25:08,750 --> 00:25:11,470
+a galeria das imagens ali,
+
+364
+00:25:11,530 --> 00:25:14,430
+e aparece,
+
+365
+00:25:15,530 --> 00:25:17,370
+depois a fonte,
+
+366
+00:25:18,080 --> 00:25:19,700
+aqui embaixo aqui,
+
+367
+00:25:19,900 --> 00:25:23,030
+qual... essa daqui é do meu dataset,
+
+368
+00:25:23,080 --> 00:25:26,670
+essa aqui é do segundo dataset,
+
+369
+00:25:26,720 --> 00:25:28,120
+depois ambiente,
+
+370
+00:25:28,860 --> 00:25:31,890
+tem as classificações aqui: floresta,
+
+371
+00:25:31,940 --> 00:25:33,880
+prédio, cidade, casa, outros,
+
+372
+00:25:35,920 --> 00:25:37,120
+conjunto,
+
+373
+00:25:38,730 --> 00:25:41,930
+tem validação, teste, formato,
+
+374
+00:25:42,560 --> 00:25:43,760
+a luz,
+
+375
+00:25:45,700 --> 00:25:47,560
+tem a imagem, a cor,
+
+376
+00:25:48,260 --> 00:25:50,380
+tem a média, se é muito claro,
+
+377
+00:25:55,630 --> 00:25:56,930
+essas coisas.
+
+378
+00:25:57,430 --> 00:26:00,170
+E aqui, quem conferiu,
+
+379
+00:26:00,660 --> 00:26:01,860
+aqui,
+
+380
+00:26:02,860 --> 00:26:05,100
+foi conferido por
+
+381
+00:26:06,430 --> 00:26:07,870
+pela gente,
+
+382
+00:26:09,630 --> 00:26:11,810
+aqui é um rótulo do CLIP,
+
+383
+00:26:11,890 --> 00:26:13,090
+mas também foi,
+
+384
+00:26:13,210 --> 00:26:14,610
+a gente olhou todas,
+
+385
+00:26:14,950 --> 00:26:18,130
+e aqui as 400 que eu falei que foram para
+a IA,
+
+386
+00:26:21,180 --> 00:26:24,100
+depois aqui porque vi já,
+
+387
+00:26:24,360 --> 00:26:26,100
+aqui mostra o,
+
+388
+00:26:26,470 --> 00:26:28,370
+a área queimada no Brasil,
+
+389
+00:26:28,530 --> 00:26:31,420
+de 2024, a média histórica,
+
+390
+00:26:31,470 --> 00:26:32,970
+e de 2025.
+
+391
+00:26:35,390 --> 00:26:38,270
+O método, o passo a passo aqui,
+
+392
+00:26:38,470 --> 00:26:40,290
+aqui eu fiz uma tabelinha,
+
+393
+00:26:40,820 --> 00:26:43,100
+porque aqui dá para dizer que,
+
+394
+00:26:43,640 --> 00:26:46,740
+a fonte dos dados,
+
+395
+00:26:46,860 --> 00:26:48,780
+as etapas do pipeline,
+
+396
+00:26:49,140 --> 00:26:50,900
+as regras do projeto,
+
+397
+00:26:51,620 --> 00:26:54,880
+os achados, que é a validação,
+
+398
+00:26:55,580 --> 00:26:56,730
+duplicadas,
+
+399
+00:26:56,780 --> 00:26:59,580
+e revisão e equilíbrio,
+
+400
+00:27:00,020 --> 00:27:03,800
+para algumas coisas que eu ainda não tinha
+feito no meu
+
+401
+00:27:04,000 --> 00:27:05,360
+projeto original,
+
+402
+00:27:06,680 --> 00:27:09,460
+e aqui os produtos, que é a cópia,
+
+403
+00:27:10,690 --> 00:27:15,090
+para não mexer com as imagens originais,
+
+404
+00:27:15,350 --> 00:27:16,840
+o que ainda tem que reforçar,
+
+405
+00:27:16,890 --> 00:27:19,670
+que as imagens aquelas que são as 400,
+
+406
+00:27:19,910 --> 00:27:21,230
+que foram para a IA,
+
+407
+00:27:22,620 --> 00:27:25,730
+e depois medir as imagens, com as
+condições,
+
+408
+00:27:25,780 --> 00:27:28,060
+e as redes treinadas,
+
+409
+00:27:30,300 --> 00:27:31,500
+aqui,
+
+410
+00:27:31,720 --> 00:27:36,100
+aqui explica como ler o projeto em um
+mapa,
+
+411
+00:27:37,650 --> 00:27:40,610
+aqui a gente tem os achados: as repetidas,
+
+412
+00:27:40,810 --> 00:27:42,950
+as cópias exatas,
+
+413
+00:27:43,330 --> 00:27:44,970
+as mesmas cenas,
+
+414
+00:27:46,080 --> 00:27:48,360
+e as parecidas, mas diferentes.
+
+415
+00:27:50,600 --> 00:27:53,720
+Aqui tem a segunda fonte das imagens,
+
+416
+00:27:54,040 --> 00:27:56,960
+aqui tem o diagrama, que eu não sei se o
+senhor
+
+417
+00:27:57,920 --> 00:28:00,420
+viu,
+
+418
+00:28:01,580 --> 00:28:03,520
+pesquisador aqui,
+
+419
+00:28:03,700 --> 00:28:07,350
+o vigia, ou o brigadista, que seria
+
+420
+00:28:07,400 --> 00:28:09,390
+que seria mais o aplicativo realmente,
+
+421
+00:28:09,440 --> 00:28:13,390
+e os componentes, que seria o dataset
+público,
+
+422
+00:28:13,440 --> 00:28:15,990
+que seriam os revisores, seria a gente
+revisar,
+
+423
+00:28:16,040 --> 00:28:17,740
+as câmeras de telefone,
+
+424
+00:28:18,640 --> 00:28:20,060
+modelo, pipeline,
+
+425
+00:28:20,740 --> 00:28:23,390
+a página, o aplicativo, etc., o
+aplicativo,
+
+426
+00:28:23,440 --> 00:28:24,730
+seria mais por último,
+
+427
+00:28:24,780 --> 00:28:26,840
+mas que ia deixar mais completo.
+
+428
+00:28:27,540 --> 00:28:30,010
+Os resultados que ainda a gente não tinha
+treinado,
+
+429
+00:28:30,060 --> 00:28:31,340
+agora a gente já tem,
+
+430
+00:28:31,420 --> 00:28:37,110
+a diferença foi de 2,5 pontos nos testes.
+
+431
+00:28:38,950 --> 00:28:42,130
+Pelos testes que eu fiz com as redes,
+
+432
+00:28:43,430 --> 00:28:45,510
+foi de 2,5,
+
+433
+00:28:45,710 --> 00:28:47,450
+a diferença de
+
+434
+00:28:48,530 --> 00:28:49,940
+com a IA,
+
+435
+00:28:49,990 --> 00:28:51,910
+treinando junto com a IA,
+
+436
+00:28:52,070 --> 00:28:53,270
+e com
+
+437
+00:28:54,210 --> 00:28:56,940
+com treinamento sem a IA, que eu já tinha
+feito,
+
+438
+00:28:56,990 --> 00:29:00,190
+como eu já tinha falado em aulas
+anteriores,
+
+439
+00:29:00,790 --> 00:29:04,110
+como eu já tinha escolhido a
+EfficientNet-B0,
+
+440
+00:29:04,490 --> 00:29:05,900
+porque ela
+
+441
+00:29:05,950 --> 00:29:08,900
+foi, por ela ser bem, digamos,
+
+442
+00:29:08,950 --> 00:29:10,140
+mais leve
+
+443
+00:29:10,190 --> 00:29:12,300
+do que os outros dois modelos,
+
+444
+00:29:12,350 --> 00:29:13,550
+somente,
+
+445
+00:29:13,870 --> 00:29:17,950
+somente se for um aplicativo, tem que ser
+alguma arquitetura,
+
+446
+00:29:19,110 --> 00:29:21,310
+algum modelo de rede neural
+
+447
+00:29:21,570 --> 00:29:22,930
+leve.
+
+448
+00:29:23,870 --> 00:29:25,450
+Depois, os atalhos,
+
+449
+00:29:25,550 --> 00:29:28,250
+o teste de atalho da rede neural ali,
+
+450
+00:29:28,530 --> 00:29:30,490
+que eu apresentei nos slides,
+
+451
+00:29:30,590 --> 00:29:33,110
+onde as redes neurais ali, também,
+
+452
+00:29:35,140 --> 00:29:38,520
+como foi medido o que a gente pediu,
+
+453
+00:29:40,060 --> 00:29:41,900
+o aqui, o antes,
+
+454
+00:29:43,120 --> 00:29:45,480
+o antes, o equilíbrio, o que tinha, e
+depois,
+
+455
+00:29:45,700 --> 00:29:47,460
+eu foquei mais em
+
+456
+00:29:47,860 --> 00:29:49,920
+imagens de florestas, né,
+
+457
+00:29:50,080 --> 00:29:51,780
+para não ficar muito assim,
+
+458
+00:29:53,670 --> 00:29:55,710
+em muitos ambientes,
+
+459
+00:29:56,630 --> 00:29:58,760
+para discutir, não ia ser muita coisa,
+
+460
+00:29:58,810 --> 00:30:01,770
+o que foi entregue até agora, 10 de 13,
+
+461
+00:30:03,820 --> 00:30:06,500
+a revisão de 100% das imagens,
+
+462
+00:30:07,610 --> 00:30:10,430
+ter fotos com e sem fogo no mesmo
+ambiente,
+
+463
+00:30:10,610 --> 00:30:14,030
+só florestas, assim, mas isso pode ser
+mais adiante,
+
+464
+00:30:14,690 --> 00:30:17,300
+mais imagens, por exemplo,
+
+465
+00:30:17,350 --> 00:30:18,680
+não só florestas,
+
+466
+00:30:18,730 --> 00:30:22,710
+assim, mas essas duas aqui, eu acredito
+que
+
+467
+00:30:22,810 --> 00:30:24,350
+para a disciplina agora,
+
+468
+00:30:25,430 --> 00:30:27,010
+seja muito pouco,
+
+469
+00:30:27,210 --> 00:30:29,370
+eu foquei mais para florestas, realmente,
+
+470
+00:30:30,510 --> 00:30:33,700
+aqui, o caminho do semestre, onde foi,
+
+471
+00:30:33,750 --> 00:30:35,090
+tudo, onde começou,
+
+472
+00:30:36,330 --> 00:30:39,110
+aqui tem os diários detalhados,
+
+473
+00:30:43,700 --> 00:30:47,140
+aí depois os limites, como a gente
+apresentou,
+
+474
+00:30:47,800 --> 00:30:50,240
+e aqui tem a equipe e o código,
+
+475
+00:30:50,560 --> 00:30:54,120
+bom, aqui, se o senhor quiser olhar,
+
+476
+00:30:54,280 --> 00:30:56,900
+tem o código e relatórios,
+
+477
+00:30:57,760 --> 00:30:59,800
+inventário, as medidas,
+
+478
+00:31:00,060 --> 00:31:04,140
+e aqui tem, olha, só clicar aqui,
+
+479
+00:31:06,920 --> 00:31:10,070
+clicar aqui, e ele vai ser redirecionado
+direto
+
+480
+00:31:10,120 --> 00:31:11,990
+para o GitHub,
+
+481
+00:31:12,040 --> 00:31:15,520
+e vai mostrar aqui as pastas,
+
+482
+00:31:15,740 --> 00:31:18,680
+do, da nova fonte,
+
+483
+00:31:19,990 --> 00:31:21,940
+que seria das imagens,
+
+484
+00:31:21,990 --> 00:31:25,050
+depois das condições, do equilíbrio,
+
+485
+00:31:25,550 --> 00:31:27,770
+só fica ali nos tópicos,
+
+486
+00:31:28,090 --> 00:31:33,600
+e ele vai redirecionar direto para ele.
+
+487
+00:31:34,140 --> 00:31:38,060
+Eu acredito que seria só isso que a gente
+tem que apresentar,
+
+488
+00:31:38,360 --> 00:31:40,050
+a gente vai fazer outro vídeo
+
+489
+00:31:40,100 --> 00:31:44,420
+para enviar a diferença das LLMs,
+
+490
+00:31:44,740 --> 00:31:46,680
+que o senhor tinha pedido,
+
+491
+00:31:47,540 --> 00:31:50,440
+e eu acredito que seria só isso realmente,
+
+492
+00:31:50,560 --> 00:31:51,760
+agora,
+
+493
+00:31:52,910 --> 00:31:54,110
+então,
+
+494
+00:31:54,190 --> 00:31:57,950
+obrigada, e até a próxima reunião nossa.
+
+495
+00:32:01,780 --> 00:32:03,880
+Duda, quer falar alguma coisa?
+
+496
+00:32:05,340 --> 00:32:06,840
+Não, não, não sei.
+
+497
+00:32:07,420 --> 00:32:08,620
+Então tá.
+

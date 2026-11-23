@@ -31,7 +31,7 @@ Dupla: Maria de Lurdes Ribeiro da Rosa e Maria Heduarda Silva Cardoso. Professor
 | Tarefa 8 | Em andamento (23/11/2026) | [LEAS/02_tarefa_8.md](LEAS/02_tarefa_8.md) |
 | Benchmark parametrizável | Concluído (19/11/2026) | [LEAS/03_benchmark.md](LEAS/03_benchmark.md) |
 
-Os enunciados completos das Tarefas 7 e 8 foram recuperados e estão resumidos nos registros acima.
+Os enunciados completos das Tarefas 7 e 8 estão em [`enunciados/`](enunciados/).
 
 ### 2.3 Ainda a recuperar
 
@@ -97,6 +97,7 @@ Anexe este arquivo (ou o link do repositório) à nova conversa e use os prompts
 | 23/11/2026 | LEAS | Tarefa 8: protocolo, verificação do artefato, rodadas do Claude | Em andamento |
 | 23/11/2026 | — | Apresentação de dicas de uso de IA: enunciado registrado | A fazer |
 | 23/11/2026 | — | Histórico migrado para este repositório (versão 2) | Concluído |
+| 23/11/2026 | — | Enunciados, materiais, instruções para IA, glossário e linha do tempo | Concluído |
 
 ## 7. Observações
 

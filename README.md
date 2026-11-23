@@ -12,11 +12,20 @@ Autoras dos trabalhos em dupla: **Maria de Lurdes Ribeiro da Rosa** e **Maria He
 | Pasta / arquivo | Conteúdo |
 |---|---|
 | [`HISTORICO_ACADEMICO.md`](HISTORICO_ACADEMICO.md) | O histórico completo, atualizado. Parte da versão inicial feita com o ChatGPT e acrescenta tudo o que foi feito depois. |
+| [`LINHA_DO_TEMPO.md`](LINHA_DO_TEMPO.md) | O semestre em ordem de datas, com as próximas entregas. |
 | [`LIAA/`](LIAA/) | Projeto Ignis Alert: dataset, treino das redes, teste de atalho, apresentação final e vídeos. |
 | [`LEAS/`](LEAS/) | Tarefa 7, Tarefa 8 (avaliação de artefatos com LLMs) e o benchmark parametrizável. |
 | [`atividades/`](atividades/) | Atividades novas ou transversais, como a apresentação de dicas de uso de IA. |
-| [`prompts/`](prompts/) | Os prompts de continuidade, para começar uma conversa nova com uma IA sem perder o contexto. |
+| [`enunciados/`](enunciados/) | O texto dos enunciados, sem edição, para conferir cada entrega item por item. |
+| [`materiais/`](materiais/) | Falas da apresentação final em PDF e a legenda da gravação. |
+| [`INSTRUCOES_PARA_IA.md`](INSTRUCOES_PARA_IA.md) | As regras de trabalho da dupla, para anexar a qualquer conversa nova com uma IA. |
+| [`GLOSSARIO.md`](GLOSSARIO.md) | Termos técnicos explicados em uma linha (F2, dHash, k-centros, atalho, selos D/F/S/R...). |
+| [`prompts/`](prompts/) | Os prompts de continuidade do documento inicial. |
 | [`documentos/`](documentos/) | O documento original em Word (versão inicial, gerada com o ChatGPT), sem alterações. |
+
+## Para começar uma conversa nova com uma IA
+
+Anexe `HISTORICO_ACADEMICO.md` e `INSTRUCOES_PARA_IA.md` (ou cole o link deste repositório) e use o Prompt 1 de [`prompts/PROMPTS.md`](prompts/PROMPTS.md).
 
 ## Situação das atividades
 

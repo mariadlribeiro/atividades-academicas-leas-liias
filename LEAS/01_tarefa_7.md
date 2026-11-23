@@ -7,7 +7,7 @@
 | Situação | **Entregue** (com lacunas apontadas na revisão de 23/11/2026) |
 | Repositório | `mariadlribeiro/artefatos-atividade-7` (privado) |
 
-## Enunciado (resumo)
+## Enunciado (resumo; texto completo em `enunciados/`)
 
 Escolher um artefato do SBSeg ou SBRC (https://doc-artefatos.github.io), identificar os selos oficiais e as instruções de avaliação da edição, e usar **pelo menos 3 LLMs de 3 provedores** para fazer duas avaliações: **analítica** (selos F e R com evidências) e **por execução**. Registrar prompts, resultados e evidências, verificar as evidências no artefato, montar tabela comparativa e fluxograma, e concluir sobre a consistência das LLMs com a avaliação oficial.
 

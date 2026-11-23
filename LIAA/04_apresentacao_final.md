@@ -13,8 +13,8 @@
 |---|---|
 | Slides (17) | Artefato no Claude: https://claude.ai/artifact/XSdLW7yfV59SkHf1hLHsAj (privado da conta) |
 | Roteiro com falas, tempos e perguntas prováveis | Documento no Claude: https://claude.ai/artifact/DT2ezE4psBDkSg1aSjARfx (privado da conta) |
-| Falas em PDF | `Fala_Maria_de_Lurdes.pdf`, `Fala_Maria_de_Lurdes_tecnica.pdf`, `Fala_Maria_Heduarda.pdf` (enviados na conversa) |
-| Gravação legendada | `Ignis_Alert_apresentacao_legendada.mp4` (1920×1080) e `legendas.srt` (enviados na conversa) |
+| Falas em PDF | [`materiais/apresentacao_final/`](../materiais/apresentacao_final/) |
+| Gravação legendada | Legenda em [`materiais/apresentacao_final/gravacao_21-11_legendas.srt`](../materiais/apresentacao_final/gravacao_21-11_legendas.srt); o vídeo (137 MB) fica fora do GitHub, ver [`materiais/README.md`](../materiais/README.md) |
 
 Ordem dos slides: capa, problema, dataset, revisão, segunda fonte, equilíbrio, detalhes, o que as medidas revelaram, redes, teste de atalho, erros, escolha, benchmark, achados, site, limites, encerramento.
 
