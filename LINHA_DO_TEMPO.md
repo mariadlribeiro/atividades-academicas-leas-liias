@@ -4,9 +4,15 @@ Montada a partir dos commits dos repositórios e das conversas registradas. Data
 
 | Data | Disciplina | O que aconteceu | Fonte |
 |---|---|---|---|
+| 08/09/2026 | LIAA | Proposta inicial (app com modelos já treinados); professor pede análise do dataset antes de modelos | página do professor |
+| 18/09/2026 | LIAA + LEAS | Atendimento: conferir 5% por classe; Atividade 3 da LEAS trocada por ferramenta de validação | página do professor |
+| 22/09/2026 | LIAA | Validação técnica dos três datasets (~3.559 imagens) | página do professor |
 | 28/09/2026 | LEAS | Tarefa 7 publicada no repositório `artefatos-atividade-7` | commits |
+| 02/10/2026 | LIAA + LEAS | 3.259 imagens; redes 87,29% → 87,53%; sugestão do benchmark parametrizável | página do professor |
+| 16/10/2026 | LIAA + LEAS | Reorientação: um único dataset, revisado por inteiro, por ambiente | página do professor |
 | 19/10/2026 | LIAA | `rd_ignisalert`: organizador de imagens por ambiente e classe | commit |
-| 06/11/2026 | LIAA | Apresentação parcial em aula (citada na apresentação final como "dia 6 do 11") | gravação de 21/11 |
+| 20/10/2026 | LIAA | Professor envia a proposta de dataset de incêndio florestal | página do professor |
+| 06/11/2026 | LIAA + LEAS | Dataset único; página de revisão; auditoria cega de 60 imagens; mínimo de mil por classe e ambiente | página do professor |
 | 13/11/2026 | LIAA | Etapas 9 e 10: condições das imagens e segunda fonte; dataset chega a 1.388 imagens | commits |
 | 17/11/2026 | LIAA | Site do projeto publicado no GitHub Pages | commits |
 | 18/11/2026 | LIAA | Etapas 11 e 12: exportação para treino e primeiro treino; curta em estilo LEGO em produção | commits; conversa |

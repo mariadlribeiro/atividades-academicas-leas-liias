@@ -13,7 +13,11 @@ Registro de disciplinas, projetos, atividades e prompts de continuidade · UNIPA
 | **LEAS** — Laboratório de Engenharia de Artefatos de Software | Documentação, organização e avaliação de artefatos de software | Tarefas 7 e 8 (avaliação de artefato com LLMs); benchmark parametrizável do Ignis Alert |
 | **LIAA** — Laboratório de Inteligência Artificial | Desenvolvimento, treino e avaliação de modelos de IA | Projeto Ignis Alert: dataset Fogo/Sem Fogo, treino de 3 redes, teste de atalho |
 
-Dupla: Maria de Lurdes Ribeiro da Rosa e Maria Heduarda Silva Cardoso. Professores das disciplinas: **a confirmar**. (Nos materiais do vídeo LEGO, o Prof. Fábio Basso aparece como orientador da pesquisa.)
+Dupla: Maria de Lurdes Ribeiro da Rosa e Maria Heduarda Silva Cardoso.
+
+**Professor:** Prof. Dr. Diego Kreutz, com contribuições do Prof. Welfer, conforme a página da disciplina e a proposta de 20/10 ([acompanhamento](enunciados/LIAA_LEAS_acompanhamento_do_professor.md)). Nos materiais do vídeo LEGO, o Prof. Fábio Basso aparece como orientador da pesquisa; confirmar se é outro vínculo (por exemplo, TCC).
+
+**Acompanhamento pelo professor:** https://unipampa4all.github.io/disciplinas/liaa/20262/projetos_html/maria-lurdes-incendio.html
 
 ## 2. LEAS
 
@@ -22,6 +26,7 @@ Dupla: Maria de Lurdes Ribeiro da Rosa e Maria Heduarda Silva Cardoso. Professor
 - Estudo do artigo "Research Artifacts in Software Engineering Publications: Status and Trends", de Liu et al. (2024).
 - Atividade relacionada à avaliação de artefatos de software.
 - Tarefa 7 e Tarefa 8 — Avaliação de Artefatos de Software (a 8 continua a 7).
+- Atividade 3 (artefato de cibersegurança), atrasada em 18/09: o professor sugeriu trocá-la por uma ferramenta de validação do dataset feita com IA; em 02/10 a sugestão virou o benchmark parametrizável.
 
 ### 2.2 Atualização
 
@@ -59,11 +64,17 @@ Preparação, organização e auditoria de datasets; classificação binária; a
 
 **Resumo dos resultados:** EfficientNet-B0 e DenseNet121 empataram no teste (F2 99,1%, 1 fogo perdido e 1 alarme falso cada); a EfficientNet-B0 foi escolhida para o aplicativo por ser cerca de 3 vezes mais rápida. No teste de atalho, a maior queda de recall foi de 2,5 pontos: sem sinal de que as redes usem o formato da foto no lugar da chama.
 
-### 3.4 Experimentos anteriores (versão 1, a conferir)
+### 3.4 Primeira fase (08/09 a 16/10)
+
+O projeto começou como um aplicativo de alerta com três redes já treinadas (95–98% de acurácia) em três datasets misturados. O professor reorientou para validar os dados antes de qualquer modelo. Até 02/10: 3.259 imagens (2.281 treino, 489 validação, 489 teste); ResNet18, DenseNet121 e uma terceira rede, com e sem segmentação e aumento de dados; a limpeza mudou a acurácia de 87,29% para 87,53%. Em 16/10 o professor pediu para recomeçar por um único dataset, revisado por inteiro e organizado por ambiente; em 20/10 enviou uma [proposta de dataset](enunciados/LIAA_proposta_do_professor_20-10.md). O trabalho atual (etapas 1 a 13) é a resposta a essa reorientação.
+
+> **Ponto a decidir com o professor:** a proposta de 20/10 conta **fumaça como incêndio**; a regra da dupla é **fogo = chama visível**. A comparação completa está na [proposta](enunciados/LIAA_proposta_do_professor_20-10.md).
+
+### 3.5 Experimentos anteriores (versão 1, a conferir)
 
 E01–E03 sem aumento; E04–E06 com torchvision; E07–E09 com Augmentor; S05 DenseNet121 + SLIC-100 + Augmentor; S06 EfficientNet-B0 + SLIC-100 + Augmentor. Valores do S05 em [LIAA/02_treino_e_teste_de_atalho.md](LIAA/02_treino_e_teste_de_atalho.md). Conferir nos arquivos de métricas do `rd_ignisalert` antes de usar.
 
-### 3.5 Questões metodológicas (versão 1, com o que foi decidido)
+### 3.6 Questões metodológicas (versão 1, com o que foi decidido)
 
 | Questão | Como ficou |
 |---|---|
@@ -86,7 +97,13 @@ Anexe este arquivo (ou o link do repositório) à nova conversa e use os prompts
 
 | Data | Disciplina | Atividade/alteração | Situação |
 |---|---|---|---|
+| 08/09/2026 | LIAA | Proposta inicial; professor pede análise do dataset antes de modelos | Reorientado |
+| 18/09/2026 | LEAS | Atividade 3 trocada por ferramenta de validação do dataset | Reorientado |
 | 28/09/2026 | LEAS | Tarefa 7 publicada no repositório | Entregue |
+| 02/10/2026 | LIAA + LEAS | Comparação de redes (87,29% → 87,53%); sugestão do benchmark | Apresentado |
+| 16/10/2026 | LIAA | Recomeçar por um único dataset, por ambiente | Reorientado |
+| 20/10/2026 | LIAA | Proposta de dataset enviada pelo professor | Recebida |
+| 06/11/2026 | LIAA + LEAS | Dataset único, página de revisão, auditoria cega de 60 imagens | Apresentado |
 | 13/11/2026 | LIAA | Dataset: etapas 9 e 10 (condições e segunda fonte), 1.388 imagens | Concluído |
 | 17/11/2026 | LIAA | Site do projeto no GitHub Pages | Publicado |
 | 18/11/2026 | LIAA | Etapas 11 e 12: exportação e treino | Concluído |
@@ -98,6 +115,7 @@ Anexe este arquivo (ou o link do repositório) à nova conversa e use os prompts
 | 23/11/2026 | — | Apresentação de dicas de uso de IA: enunciado registrado | A fazer |
 | 23/11/2026 | — | Histórico migrado para este repositório (versão 2) | Concluído |
 | 23/11/2026 | — | Enunciados, materiais, instruções para IA, glossário e linha do tempo | Concluído |
+| 23/11/2026 | LIAA + LEAS | Acompanhamento do professor e proposta de 20/10 registrados, com comparação | Concluído |
 
 ## 7. Observações
 

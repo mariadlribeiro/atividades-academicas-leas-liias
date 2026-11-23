@@ -24,6 +24,8 @@ Repetir a avaliação da T7 com **o mesmo artefato, as mesmas instruções e, de
 
 ## Pendências
 
+- **Apresentar os resultados em aula, não só o link do repositório** (cobrança do professor em 06/11).
+
 - Concluir a análise das rodadas T8-C-01 e T8-C-02 e preencher as fichas.
 - Rodadas das outras LLMs. O escopo final (quais LLMs foram repetidas e por quê) está registrado no protocolo; conferir antes da entrega.
 - Recuperar as versões usadas na T7 (`docs/CONFIG_T7.md`); se não houver registro, declarar "não registrado na T7".

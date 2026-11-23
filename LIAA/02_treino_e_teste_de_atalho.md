@@ -47,6 +47,10 @@ Maior queda: 2,5 pontos. **Não há sinal de que as redes usem o formato no luga
 
 **EfficientNet-B0 vai para o aplicativo**: mesmo F2 da DenseNet121 e cerca de 3 vezes mais rápida (35 ms contra ~97 ms por imagem na CPU, campanha `custo` do benchmark). A DenseNet121 fica como referência de robustez.
 
+## Primeira fase (apresentada em 02/10, segundo a página do professor)
+
+3.259 imagens de três datasets (2.281 treino, 489 validação, 489 teste). ResNet18, DenseNet121 e uma terceira arquitetura, sem e com segmentação e aumento de dados: a limpeza mudou a acurácia de **87,29% para 87,53%**. O professor pediu tabelas comparando os cenários (original, limpo, segmentação, aumento, tudo) e, depois, recomeçar pelo dataset.
+
 ## Experimentos anteriores (registrados no documento inicial, a conferir)
 
 O documento inicial (ChatGPT) registra experimentos feitos antes, no repositório `rd_ignisalert`:

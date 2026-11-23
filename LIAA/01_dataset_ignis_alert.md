@@ -4,11 +4,15 @@
 |---|---|
 | Disciplina | LIAA (Laboratório de Inteligência Artificial) |
 | Atividade | Construção, revisão e equilíbrio do dataset Fogo / Sem Fogo |
-| Professor | A confirmar |
+| Professor | Prof. Dr. Diego Kreutz (contribuições do Prof. Welfer) |
 | Período | Até 13/11/2026 (etapas 1 a 10); etapa 11 em 18/11/2026 |
 | Situação | **Concluída** |
 | Repositório | https://github.com/mariadlribeiro/dataset_ignis_alert |
 | Site | https://mariadlribeiro.github.io/dataset_ignis_alert/ |
+
+## Como chegou aqui
+
+Em 16/10 o professor pediu um único dataset, revisado por inteiro e organizado por ambiente, e em 20/10 enviou uma [proposta](../enunciados/LIAA_proposta_do_professor_20-10.md). Em 06/11 pediu no mínimo mil imagens por classe e por ambiente ([acompanhamento](../enunciados/LIAA_LEAS_acompanhamento_do_professor.md)). As etapas abaixo respondem a isso; a floresta chegou a 510 × 510, ainda abaixo do mínimo.
 
 ## Objetivo
 
@@ -65,6 +69,10 @@ Igualar a quantidade não igualou as condições: **49% das imagens sem fogo sã
 O código dos scripts e das páginas de revisão foi gerado com o Claude (Anthropic) e executado e conferido pelas autoras. O CLIP foi usado só para sugerir rótulos; a decisão final das imagens da fonte 1 foi humana. Os 400 rótulos da segunda fonte foram dados por IA às cegas e conferidos por amostra (limitação registrada).
 
 ## Pendências
+
+- **Decidir com o professor a regra de fumaça:** a proposta de 20/10 conta fumaça como incêndio; aqui, fumaça sozinha não é fogo.
+- Chegar a mil imagens por classe e por ambiente (pedido de 06/11).
+- Pelo menos 30% de negativos difíceis no "sem fogo" (proposta de 20/10).
 
 - Conferência humana completa dos 400 rótulos da segunda fonte.
 - Confirmar a licença da segunda fonte.

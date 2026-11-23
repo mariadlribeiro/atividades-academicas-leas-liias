@@ -5,7 +5,9 @@ Registro das atividades, projetos, decisões e entregas de duas disciplinas da U
 - **LEAS:** Laboratório de Engenharia de Artefatos de Software.
 - **LIAA:** Laboratório de Inteligência Artificial. No documento inicial, gerado com o ChatGPT, a sigla aparece como "LIIAS". Nos materiais do projeto (site, slides, README do benchmark), a sigla usada é LIAA. **Confirmar com o enunciado oficial qual é a sigla correta.**
 
-Autoras dos trabalhos em dupla: **Maria de Lurdes Ribeiro da Rosa** e **Maria Heduarda Silva Cardoso**.
+Autoras dos trabalhos em dupla: **Maria de Lurdes Ribeiro da Rosa** e **Maria Heduarda Silva Cardoso**. Professor: **Prof. Dr. Diego Kreutz**.
+
+Acompanhamento do projeto pelo professor: https://unipampa4all.github.io/disciplinas/liaa/20262/projetos_html/maria-lurdes-incendio.html ([resumo e situação das pendências](enunciados/LIAA_LEAS_acompanhamento_do_professor.md)).
 
 ## Como este repositório está organizado
 
@@ -16,7 +18,7 @@ Autoras dos trabalhos em dupla: **Maria de Lurdes Ribeiro da Rosa** e **Maria He
 | [`LIAA/`](LIAA/) | Projeto Ignis Alert: dataset, treino das redes, teste de atalho, apresentação final e vídeos. |
 | [`LEAS/`](LEAS/) | Tarefa 7, Tarefa 8 (avaliação de artefatos com LLMs) e o benchmark parametrizável. |
 | [`atividades/`](atividades/) | Atividades novas ou transversais, como a apresentação de dicas de uso de IA. |
-| [`enunciados/`](enunciados/) | O texto dos enunciados, sem edição, para conferir cada entrega item por item. |
+| [`enunciados/`](enunciados/) | Enunciados das tarefas, o acompanhamento do professor e a proposta de dataset de 20/10, com a comparação com o que foi feito. |
 | [`materiais/`](materiais/) | Falas da apresentação final em PDF e a legenda da gravação. |
 | [`INSTRUCOES_PARA_IA.md`](INSTRUCOES_PARA_IA.md) | As regras de trabalho da dupla, para anexar a qualquer conversa nova com uma IA. |
 | [`GLOSSARIO.md`](GLOSSARIO.md) | Termos técnicos explicados em uma linha (F2, dHash, k-centros, atalho, selos D/F/S/R...). |

@@ -21,7 +21,7 @@ Mostra as etapas: busca das fontes, inventário, revisão (fogo × fumaça), dup
 
 Curta sobre prevenção de incêndio florestal, com quatro personagens (Seu Ademir, Rosa, Sargento Vitor, Célia) e quatro cenários (sítio, torre/trilha, quartel, sala da Defesa Civil). Frase-guia: "a IA faz a triagem, quem responde decide". Foi escrita uma descrição do projeto do vídeo para a disciplina e planejado um plano B em formato "motion comic".
 
-Pendências registradas na época: nome da disciplina e do professor para os créditos; incluir ou não a Maria Heduarda nos créditos; manter ou não o dado do MapBiomas; imagem da torre de observação (C2); data de entrega.
+Na página do professor (até 06/11), "Vídeos" estava em 0/5, porque ainda não havia vídeo publicado. Pendências registradas na época: nome da disciplina e do professor para os créditos; incluir ou não a Maria Heduarda nos créditos; manter ou não o dado do MapBiomas; imagem da torre de observação (C2); data de entrega.
 
 ## 3. Gravação da apresentação final com legenda
 

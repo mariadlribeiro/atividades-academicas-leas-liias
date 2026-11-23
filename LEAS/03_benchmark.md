@@ -3,7 +3,7 @@
 | Campo | Registro |
 |---|---|
 | Disciplina | LEAS |
-| Origem | Sugestão do professor: transformar os experimentos num artefato de benchmark parametrizável, gerado com IA, em que o usuário escolhe a campanha |
+| Origem | Em 18/09, troca da Atividade 3 (cibersegurança) por uma ferramenta de validação feita com IA; em 02/10, sugestão do professor: transformar os experimentos num artefato de benchmark parametrizável, gerado com IA, em que o usuário escolhe a campanha |
 | Data | 19/11/2026 |
 | Situação | **Concluído** |
 | Onde está | https://github.com/mariadlribeiro/dataset_ignis_alert/tree/main/benchmark |
